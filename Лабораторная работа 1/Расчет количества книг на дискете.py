@@ -1,9 +1,15 @@
 # TODO Найдите количество книг, которое можно разместить на дискете
-book = 100 * 50 * 25 * 4
-disk = 1.44 * 1024 * 1024
-count_book = disk / book
 
-# TODO Найдите количество книг, которое можно разместить на дискете
+disk_size_mb = 1.44
+pages = 100
+lines = 50
+chars = 25
+bytes = 4
 
-print("Количество книг, помещающихся на дискету:", round(count_book))
+disk_size_bytes = disk_size_mb * 1024 * 1024
 
+book_size_bytes = pages * lines * chars * bytes
+
+answer = disk_size_bytes // book_size_bytes
+
+print("Количество книг, помещающихся на дискету:", int(answer ) )
